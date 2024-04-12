@@ -2,6 +2,7 @@
 #include <string>
 #include "user.pb.h"
 #include "mprpcapplication.h"
+#include "rpcprovider.h"
 
 /*
 UserService原来所一个本地服务，提供了两个进程内的本地方法，Login和GetFriendLists
@@ -50,7 +51,16 @@ public:
 
 };
 
-int main()
-{
+int main(int argc, char **argv)//框架使用
+{   
+    //调用框架的初始化操作
+    MprpcApplication::Init(argc, argv);//初始化时，传入这两个参数是因为启动的时候要读配置文件
+
+    //procider是一个rpc网络服务对象，把UserService对象发布到rpc节点上，负责数据的序列化、反序列化、网络数据收发
+    RpcProvider provider;
+    provider.NotifyService(new UserService());
+
+    //启动一个rpc服务发布节点，run之后，进程进入阻塞状态，等待远程的rpc调用请求
+    provider.Run();
     return 0;
 }

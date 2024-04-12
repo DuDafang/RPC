@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../src/include/rpcprovider.h
+google/protobuf/service.h
+../src/include/google/protobuf/service.h
+
+/home/yanglanqi/Working/RPC/RPC/src/rpcprovider.cc
+rpcprovider.h
+/home/yanglanqi/Working/RPC/RPC/src/rpcprovider.h
+

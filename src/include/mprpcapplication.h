@@ -13,3 +13,8 @@ private:
     MprpcApplication(const MprpcApplication&) = delete;
     MprpcApplication(MprpcApplication&&) = delete;
 };
+/*MprpcApplication类使用了单例设计模式
+理由如下：构造函数被声明为私有
+进制复制和移动构造，复制构造函数和移动构造函数都被删除(=delete)，阻止了通过复制或移动来创建额外的实例
+静态获取实例，GetInstance() 方法是静态的，返回对唯一实例的引用；该方法内部使用静态局部变量来存储唯一实例，确保只创建一次，并在首次调用时进行初始化
+*/

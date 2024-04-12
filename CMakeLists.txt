@@ -9,14 +9,16 @@ set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
 set(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)
 
 #设置项目编译头文件搜索路径 -I
-include_directories(${PROJECT_SOURCE_DIR}/src/include())
+include_directories(${PROJECT_SOURCE_DIR}/src/include)
 include_directories(${PROJECT_SOURCE_DIR}/example)
 
 #设置项目库文件搜索路径 -L
 link_directories(${PROJECT_SOURCE_DIR}/lib)
 
+
+#src框架的代码要向外提供成一个so库，所以
 #src包含了mprpc框架所有的相关代码
-add_subdirectory(src)
+add_subdirectory(src)#在这个目录里面再去搜索CMakeLists
 
 #example包含了mprpc框架使用的示例代码
-add_subdirectory((example))
+add_subdirectory(example)
