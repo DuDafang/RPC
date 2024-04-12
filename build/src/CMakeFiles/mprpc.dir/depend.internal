@@ -3,6 +3,7 @@
 
 src/CMakeFiles/mprpc.dir/mprpcapplication.cc.o
  ../src/include/mprpcapplication.h
+ ../src/include/mprpcconfig.h
  /home/yanglanqi/Working/RPC/RPC/src/mprpcapplication.cc
 src/CMakeFiles/mprpc.dir/rpcprovider.cc.o
  ../src/include/rpcprovider.h
