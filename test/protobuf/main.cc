@@ -45,3 +45,6 @@ int main()
     std::cout << rsp.friend_list_size() << std::endl;
     return 0;
 }
+//g++ main.cc test.pb.cc -lprotobuf -lpthread
+//./a.out
+//注意文件路径

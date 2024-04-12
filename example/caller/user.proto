@@ -1,3 +1,5 @@
+//每次修改了.proto文件，需要用protoc命令重新生成.pb.h和.pb.cc文件
+//protoc xxx.proto --cpp_out=./
 syntax = "proto3";
 
 package fixbug;
