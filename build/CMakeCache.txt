@@ -211,6 +211,9 @@ CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 //Value Computed by CMake
 mprpc_BINARY_DIR:STATIC=/home/yanglanqi/Working/RPC/RPC/build
 
+//Dependencies for the target
+mprpc_LIB_DEPENDS:STATIC=general;muduo;
+
 //Value Computed by CMake
 mprpc_SOURCE_DIR:STATIC=/home/yanglanqi/Working/RPC/RPC
 

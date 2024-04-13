@@ -1134,6 +1134,18 @@
 			"value" : "/home/yanglanqi/Working/RPC/RPC/build"
 		},
 		{
+			"name" : "mprpc_LIB_DEPENDS",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Dependencies for the target"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "general;muduo;"
+		},
+		{
 			"name" : "mprpc_SOURCE_DIR",
 			"properties" : 
 			[

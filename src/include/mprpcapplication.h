@@ -9,7 +9,7 @@ public:
     //argv是一个字符指针数组，每个元素指向一个以null结尾的C字符串，表示每个命令行参数
     static MprpcApplication& GetInstance();//方法写在对应的cc文件
 
-    static MprpcConfig* ;
+    static MprpcConfig& GetConfig();
 private:
     static MprpcConfig m_config;
 
