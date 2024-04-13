@@ -6,22 +6,16 @@
 
 #IncludeRegexTransform: 
 
-../src/include/mprpcapplication.h
-mprpcconfig.h
-../src/include/mprpcconfig.h
-
 ../src/include/mprpcconfig.h
 unordered_map
 -
 string
 -
 
-/home/yanglanqi/Working/RPC/RPC/src/mprpcapplication.cc
-mprpcapplication.h
-/home/yanglanqi/Working/RPC/RPC/src/mprpcapplication.h
+/home/yanglanqi/Working/RPC/RPC/src/mprpcconfig.cc
+mprpcconfig.h
+/home/yanglanqi/Working/RPC/RPC/src/mprpcconfig.h
 iostream
--
-unistd.h
 -
 string
 -
