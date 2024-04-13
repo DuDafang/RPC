@@ -12,7 +12,7 @@ void RpcProvider::NotifyService(google::protobuf::Service *service)
 void RpcProvider::Run()
 {
     std::string ip = MprpcApplication::GetInstance().GetConfig().Load("rpcserverip");
-    uint16_t port = atoi(MprpcApplication::GetInstance().GetConfig().Load("rpcserverip").c_str());
+    uint16_t port = atoi(MprpcApplication::GetInstance().GetConfig().Load("rpcserverport").c_str());
     muduo::net::InetAddress address(ip, port);
 
     //创建TcpServer对象
@@ -24,8 +24,11 @@ void RpcProvider::Run()
     //如果有多个线程，那么有一个线程专门做io线程，接受新用户的连接，生成相应的clientfd，分发给工作线程，剩余的就是工作线程
     server.setThreadNum(4);//基于reactor的服务器模型，epoll+多线程
 
+    std::cout << "RpcProvider starrt service at ip: " << ip << std::endl;
+
     //启动网络服务
     server.start();
+
     m_eveentLoop.loop();//以阻塞的方式等待远程的连接
 }
 

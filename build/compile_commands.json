@@ -1,17 +1,17 @@
 [
 {
   "directory": "/home/yanglanqi/Working/RPC/RPC/build/src",
-  "command": "/usr/bin/g++  -Dmprpc_EXPORTS -I/home/yanglanqi/Working/RPC/RPC/src/include -I/home/yanglanqi/Working/RPC/RPC/example  -g -fPIC   -o CMakeFiles/mprpc.dir/mprpcapplication.cc.o -c /home/yanglanqi/Working/RPC/RPC/src/mprpcapplication.cc",
+  "command": "/usr/bin/g++   -I/home/yanglanqi/Working/RPC/RPC/src/include -I/home/yanglanqi/Working/RPC/RPC/example  -g   -o CMakeFiles/mprpc.dir/mprpcapplication.cc.o -c /home/yanglanqi/Working/RPC/RPC/src/mprpcapplication.cc",
   "file": "/home/yanglanqi/Working/RPC/RPC/src/mprpcapplication.cc"
 },
 {
   "directory": "/home/yanglanqi/Working/RPC/RPC/build/src",
-  "command": "/usr/bin/g++  -Dmprpc_EXPORTS -I/home/yanglanqi/Working/RPC/RPC/src/include -I/home/yanglanqi/Working/RPC/RPC/example  -g -fPIC   -o CMakeFiles/mprpc.dir/mprpcconfig.cc.o -c /home/yanglanqi/Working/RPC/RPC/src/mprpcconfig.cc",
+  "command": "/usr/bin/g++   -I/home/yanglanqi/Working/RPC/RPC/src/include -I/home/yanglanqi/Working/RPC/RPC/example  -g   -o CMakeFiles/mprpc.dir/mprpcconfig.cc.o -c /home/yanglanqi/Working/RPC/RPC/src/mprpcconfig.cc",
   "file": "/home/yanglanqi/Working/RPC/RPC/src/mprpcconfig.cc"
 },
 {
   "directory": "/home/yanglanqi/Working/RPC/RPC/build/src",
-  "command": "/usr/bin/g++  -Dmprpc_EXPORTS -I/home/yanglanqi/Working/RPC/RPC/src/include -I/home/yanglanqi/Working/RPC/RPC/example  -g -fPIC   -o CMakeFiles/mprpc.dir/rpcprovider.cc.o -c /home/yanglanqi/Working/RPC/RPC/src/rpcprovider.cc",
+  "command": "/usr/bin/g++   -I/home/yanglanqi/Working/RPC/RPC/src/include -I/home/yanglanqi/Working/RPC/RPC/example  -g   -o CMakeFiles/mprpc.dir/rpcprovider.cc.o -c /home/yanglanqi/Working/RPC/RPC/src/rpcprovider.cc",
   "file": "/home/yanglanqi/Working/RPC/RPC/src/rpcprovider.cc"
 },
 {
