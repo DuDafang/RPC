@@ -7,7 +7,8 @@
 /*
 UserService原来所一个本地服务，提供了两个进程内的本地方法，Login和GetFriendLists
 */
-class UserService : public fixbug::UserServiceRpc//使用在rpc服务发布端
+class UserService : public fixbug::UserServiceRpc//使用在rpc服务发布端,
+//UserService从UserServiceRpc继承而来，UserServiceRpc从Service继承而来
 {
 public:
     bool Login(std::string name, std::string pwd)
