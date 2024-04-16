@@ -7,3 +7,4 @@ message RpcHeader{
     bytes method_name = 2;
     uint32 args_size = 3;
 }
+//在proto中定义的成员变量，会生成读写方法，读方法就是变量的名字作为读函数的名字，写方法就是在前面加上set_名字
