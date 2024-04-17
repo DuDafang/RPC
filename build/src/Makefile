@@ -152,6 +152,33 @@ mprpcapplication.cc.s:
 	cd /home/yanglanqi/Working/RPC/RPC/build && $(MAKE) -f src/CMakeFiles/mprpc.dir/build.make src/CMakeFiles/mprpc.dir/mprpcapplication.cc.s
 .PHONY : mprpcapplication.cc.s
 
+mprpcchannel.o: mprpcchannel.cc.o
+
+.PHONY : mprpcchannel.o
+
+# target to build an object file
+mprpcchannel.cc.o:
+	cd /home/yanglanqi/Working/RPC/RPC/build && $(MAKE) -f src/CMakeFiles/mprpc.dir/build.make src/CMakeFiles/mprpc.dir/mprpcchannel.cc.o
+.PHONY : mprpcchannel.cc.o
+
+mprpcchannel.i: mprpcchannel.cc.i
+
+.PHONY : mprpcchannel.i
+
+# target to preprocess a source file
+mprpcchannel.cc.i:
+	cd /home/yanglanqi/Working/RPC/RPC/build && $(MAKE) -f src/CMakeFiles/mprpc.dir/build.make src/CMakeFiles/mprpc.dir/mprpcchannel.cc.i
+.PHONY : mprpcchannel.cc.i
+
+mprpcchannel.s: mprpcchannel.cc.s
+
+.PHONY : mprpcchannel.s
+
+# target to generate assembly for a file
+mprpcchannel.cc.s:
+	cd /home/yanglanqi/Working/RPC/RPC/build && $(MAKE) -f src/CMakeFiles/mprpc.dir/build.make src/CMakeFiles/mprpc.dir/mprpcchannel.cc.s
+.PHONY : mprpcchannel.cc.s
+
 mprpcconfig.o: mprpcconfig.cc.o
 
 .PHONY : mprpcconfig.o
@@ -206,33 +233,6 @@ rpcheader.pb.cc.s:
 	cd /home/yanglanqi/Working/RPC/RPC/build && $(MAKE) -f src/CMakeFiles/mprpc.dir/build.make src/CMakeFiles/mprpc.dir/rpcheader.pb.cc.s
 .PHONY : rpcheader.pb.cc.s
 
-rpcprovider.o: rpcprovider.cc.o
-
-.PHONY : rpcprovider.o
-
-# target to build an object file
-rpcprovider.cc.o:
-	cd /home/yanglanqi/Working/RPC/RPC/build && $(MAKE) -f src/CMakeFiles/mprpc.dir/build.make src/CMakeFiles/mprpc.dir/rpcprovider.cc.o
-.PHONY : rpcprovider.cc.o
-
-rpcprovider.i: rpcprovider.cc.i
-
-.PHONY : rpcprovider.i
-
-# target to preprocess a source file
-rpcprovider.cc.i:
-	cd /home/yanglanqi/Working/RPC/RPC/build && $(MAKE) -f src/CMakeFiles/mprpc.dir/build.make src/CMakeFiles/mprpc.dir/rpcprovider.cc.i
-.PHONY : rpcprovider.cc.i
-
-rpcprovider.s: rpcprovider.cc.s
-
-.PHONY : rpcprovider.s
-
-# target to generate assembly for a file
-rpcprovider.cc.s:
-	cd /home/yanglanqi/Working/RPC/RPC/build && $(MAKE) -f src/CMakeFiles/mprpc.dir/build.make src/CMakeFiles/mprpc.dir/rpcprovider.cc.s
-.PHONY : rpcprovider.cc.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -245,15 +245,15 @@ help:
 	@echo "... mprpcapplication.o"
 	@echo "... mprpcapplication.i"
 	@echo "... mprpcapplication.s"
+	@echo "... mprpcchannel.o"
+	@echo "... mprpcchannel.i"
+	@echo "... mprpcchannel.s"
 	@echo "... mprpcconfig.o"
 	@echo "... mprpcconfig.i"
 	@echo "... mprpcconfig.s"
 	@echo "... rpcheader.pb.o"
 	@echo "... rpcheader.pb.i"
 	@echo "... rpcheader.pb.s"
-	@echo "... rpcprovider.o"
-	@echo "... rpcprovider.i"
-	@echo "... rpcprovider.s"
 .PHONY : help
 
 

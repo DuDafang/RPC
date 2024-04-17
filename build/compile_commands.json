@@ -16,8 +16,8 @@
 },
 {
   "directory": "/home/yanglanqi/Working/RPC/RPC/build/src",
-  "command": "/usr/bin/g++   -I/home/yanglanqi/Working/RPC/RPC/src/include -I/home/yanglanqi/Working/RPC/RPC/example  -g   -o CMakeFiles/mprpc.dir/rpcprovider.cc.o -c /home/yanglanqi/Working/RPC/RPC/src/rpcprovider.cc",
-  "file": "/home/yanglanqi/Working/RPC/RPC/src/rpcprovider.cc"
+  "command": "/usr/bin/g++   -I/home/yanglanqi/Working/RPC/RPC/src/include -I/home/yanglanqi/Working/RPC/RPC/example  -g   -o CMakeFiles/mprpc.dir/mprpcchannel.cc.o -c /home/yanglanqi/Working/RPC/RPC/src/mprpcchannel.cc",
+  "file": "/home/yanglanqi/Working/RPC/RPC/src/mprpcchannel.cc"
 },
 {
   "directory": "/home/yanglanqi/Working/RPC/RPC/build/example/callee",
