@@ -157,5 +157,22 @@ void RpcProvider::OnMessage(const muduo::net::TcpConnectionPtr& conn, muduo::net
 }
 //closure的回调操作，用于序列化rpc的响应和网络发送
 void RpcProvider::SendRpcResponse(const muduo::net::TcpConnectionPtr& conn, google::protobuf::Message* response) {
-
+    std::string response_str;
+    if (response->SerializeToString(&response_str)) {//response进行序列化
+        //序列化成功后，通过网络把rpc方法执行的结果发送给rpc方法的调用方
+        conn->send(response_str);
+        //发完响应之后这次rp请求就结束了，rpc服务的提供方主动断开连接
+        conn->shutdown();//模拟http中的短链接服务，由rpcprovider主动断开连接
+    } else {
+        std::cout << "Serialize response_str error" << std::endl;
+    } 
+    conn->shutdown();//模拟http中的短链接服务，由rpcprovider主动断开连接
 }
+//这里做的事情是
+/*
+
+通过onmessage，muduo库在接收远程的字符流之后，经过解析拿到要请求的service和method，然后给其绑定一个回调，动态创建这个方法对应的response和request
+然后由框架调用这个方法，把参数传到业务层去，业务层做的事情就是拿到参数做本地业务，填响应值，然后调用回调
+最后done执行run，调用到绑定的回调，就是RpcProvider::SendRpcResponse
+
+*/

@@ -1,2 +1,14 @@
 # RPC
-Test
+首先服务提供方，通过RpcProvier，向RpcProvier注册服务对象和服务方法
+通过protobuf提供的抽象的service和method来把服务对象和其对应的服务方法记录在一个map中
+Run中启动了一个epoll+多线程的服务器
+此时已经启动，开始接收远程连接
+远程如果有新链接，muduo库会帮我们回调onconnection
+OnConnection方法：如果有rpc客户端断开了，rpc服务端就会把相应连接shutdown，释放相应的socket资源
+OnMessgae：等待远程rpc调用请求，数据来了之后，按我们协商好的数据格式解析，最终解析出service_name和method_name
+以及参数
+从抽象层动态生成Message的请求和响应，把参数数据反序列化填到请求里面
+生成回调
+在框架上调用业务的方法
+从请求中拿参数、做本地业务、填响应消息、最后执行回调
+回调会执行绑定的方法，这里做的事情是把响应消息序列化，然后通过网络发送回去，rpc服务的提供者主动关闭连接
