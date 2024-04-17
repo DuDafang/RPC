@@ -37,4 +37,7 @@ private:
     void OnConnection(const muduo::net::TcpConnectionPtr&);
     //已建立连接用户的读写事件回调，muduo1如果发现有可读写的消息，就会主动使用这个函数
     void OnMessage(const muduo::net::TcpConnectionPtr&, muduo::net::Buffer*, muduo::Timestamp);
+    //closure的回调操作，用于序列化rpc的响应和网络发送
+    void SendRpcResponse(const muduo::net::TcpConnectionPtr&, google::protobuf::Message*);
+
 };
