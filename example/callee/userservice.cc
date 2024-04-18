@@ -41,7 +41,7 @@ public:
         //把响应写入 包括错误码、错误消息、返回值
         fixbug::ResultCode *code = response->mutable_result();
         code->set_errcode(0);
-        code->set_errmsg("");
+        code->set_errmsg("");//("login do error!");
         response->set_succuss(login_result);
 
         //执行回调操作

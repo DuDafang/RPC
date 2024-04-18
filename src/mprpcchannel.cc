@@ -7,6 +7,7 @@
 #include "mprpcapplication.h"
 #include <arpa/inet.h>
 #include <netinet/in.h>
+#include <unistd.h>
 /*
 header_size + service_name method_name args_size + args
 */
@@ -53,19 +54,24 @@ void MprpcChannel::CallMethod(const google::protobuf::MethodDescriptor* method,
 
     //打印调试信息
     std::cout << "==============================" << std::endl;
-    std::cout << "header_size" << header_size << std::endl;
-    std::cout << "rpc_header_str" << rpc_header_str << std::endl;
-    std::cout << "service_name" << service_name << std::endl;
-    std::cout << "method_name" << method_name << std::endl;
-    std::cout << "args_size" << args_size << std::endl;
-    std::cout << "args_str" << args_str << std::endl;
+    std::cout << "header_size: " << header_size << std::endl;
+    std::cout << "rpc_header_str: " << rpc_header_str << std::endl;
+    std::cout << "service_name: " << service_name << std::endl;
+    std::cout << "method_name: " << method_name << std::endl;
+    std::cout << "args_size: " << args_size << std::endl;
+    std::cout << "args_str: " << args_str << std::endl;
     std::cout << "==============================" << std::endl;
     //使用tcp编程，完成rpc方法的远程调用
+    //如果觉得手动close比较麻烦，可以创建一个智能指针，来动态维护clientfd，然后自定义一下删除器
     int clientfd = socket(AF_INET, SOCK_STREAM, 0);//（参数？）
+    
     if (-1 == clientfd) {
         std::cout << "create socket error! errno: " << errno << std::endl;
         exit(EXIT_FAILURE);
     }
+
+
+
     //读取配置文件rpcserver的信息
     std::string ip = MprpcApplication::GetInstance().GetConfig().Load("rpcserverip");
     uint16_t port = atoi(MprpcApplication::GetInstance().GetConfig().Load("rpcserverport").c_str());
@@ -78,26 +84,35 @@ void MprpcChannel::CallMethod(const google::protobuf::MethodDescriptor* method,
     if (-1 == connect(clientfd, (struct sockaddr*)&server_addr, sizeof(server_addr)))
     {
         std::cout << "connect error! errno: " << errno << std::endl;
+        close(clientfd);
         exit(EXIT_FAILURE);
     };
     //发送rpc请求
     if (-1 == send(clientfd, send_rpc_str.c_str(), send_rpc_str.size(), 0)) {
         std::cout << "send error! " << errno << std::endl;
+        close(clientfd);
         return;//结束本次rpc调用
     }
     //接收rpc请求的响应值
     char recv_buf[1024] = {0};//定义缓冲区
     int recv_size = 0;
-    if (-1 == (recv_size = (clientfd, recv_buf, 1024, 0)))//第2个参数是缓冲区地址
+    if (-1 == (recv_size = recv(clientfd, recv_buf, 1024, 0)))//第2个参数是缓冲区地址
     {
         std::cout << "recv error! " << errno << std::endl;
+        close(clientfd);
         return;//结束本次rpc调用
     }
     
-    std::string response_str(recv_buf, 0, recv_size);//用recv_buf初始化response_str
+    //std::string response_str(recv_buf, 0, recv_size);//用recv_buf初始化response_str
+    //上面的代码有bug，recv_buf中遇到\0，后面的数据就存不下来了，导致反序列化失败
+
     //反序列化rpc调用的响应数据
-    if (response->ParseFromString(response_str)) {
-        std::cout << "parse error! response_str: " << response_str << std::endl;
+    //if (!response->ParseFromString(response_str)) {
+    if (!response->ParseFromArray(recv_buf, recv_size)) {
+        std::cout << "parse error! response_str: " << recv_buf << std::endl;
+        close(clientfd);
         return;
     }
+
+    close(clientfd);//关闭一下
 };
