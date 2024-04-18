@@ -39,7 +39,7 @@ namespace protobuf_user_2eproto {
 struct TableStruct {
   static const ::google::protobuf::internal::ParseTableField entries[];
   static const ::google::protobuf::internal::AuxillaryParseTableField aux[];
-  static const ::google::protobuf::internal::ParseTable schema[3];
+  static const ::google::protobuf::internal::ParseTable schema[5];
   static const ::google::protobuf::internal::FieldMetadata field_metadata[];
   static const ::google::protobuf::internal::SerializationTable serialization_table[];
   static const ::google::protobuf::uint32 offsets[];
@@ -53,15 +53,23 @@ extern LoginRequestDefaultTypeInternal _LoginRequest_default_instance_;
 class LoginResponse;
 class LoginResponseDefaultTypeInternal;
 extern LoginResponseDefaultTypeInternal _LoginResponse_default_instance_;
+class RegisterRequest;
+class RegisterRequestDefaultTypeInternal;
+extern RegisterRequestDefaultTypeInternal _RegisterRequest_default_instance_;
 class ResultCode;
 class ResultCodeDefaultTypeInternal;
 extern ResultCodeDefaultTypeInternal _ResultCode_default_instance_;
+class RrgisterResponse;
+class RrgisterResponseDefaultTypeInternal;
+extern RrgisterResponseDefaultTypeInternal _RrgisterResponse_default_instance_;
 }  // namespace fixbug
 namespace google {
 namespace protobuf {
 template<> ::fixbug::LoginRequest* Arena::CreateMaybeMessage<::fixbug::LoginRequest>(Arena*);
 template<> ::fixbug::LoginResponse* Arena::CreateMaybeMessage<::fixbug::LoginResponse>(Arena*);
+template<> ::fixbug::RegisterRequest* Arena::CreateMaybeMessage<::fixbug::RegisterRequest>(Arena*);
 template<> ::fixbug::ResultCode* Arena::CreateMaybeMessage<::fixbug::ResultCode>(Arena*);
+template<> ::fixbug::RrgisterResponse* Arena::CreateMaybeMessage<::fixbug::RrgisterResponse>(Arena*);
 }  // namespace protobuf
 }  // namespace google
 namespace fixbug {
@@ -426,6 +434,255 @@ class LoginResponse : public ::google::protobuf::Message /* @@protoc_insertion_p
   mutable ::google::protobuf::internal::CachedSize _cached_size_;
   friend struct ::protobuf_user_2eproto::TableStruct;
 };
+// -------------------------------------------------------------------
+
+class RegisterRequest : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:fixbug.RegisterRequest) */ {
+ public:
+  RegisterRequest();
+  virtual ~RegisterRequest();
+
+  RegisterRequest(const RegisterRequest& from);
+
+  inline RegisterRequest& operator=(const RegisterRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  RegisterRequest(RegisterRequest&& from) noexcept
+    : RegisterRequest() {
+    *this = ::std::move(from);
+  }
+
+  inline RegisterRequest& operator=(RegisterRequest&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const RegisterRequest& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const RegisterRequest* internal_default_instance() {
+    return reinterpret_cast<const RegisterRequest*>(
+               &_RegisterRequest_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    3;
+
+  void Swap(RegisterRequest* other);
+  friend void swap(RegisterRequest& a, RegisterRequest& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline RegisterRequest* New() const final {
+    return CreateMaybeMessage<RegisterRequest>(NULL);
+  }
+
+  RegisterRequest* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<RegisterRequest>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const RegisterRequest& from);
+  void MergeFrom(const RegisterRequest& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(RegisterRequest* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // bytes name = 2;
+  void clear_name();
+  static const int kNameFieldNumber = 2;
+  const ::std::string& name() const;
+  void set_name(const ::std::string& value);
+  #if LANG_CXX11
+  void set_name(::std::string&& value);
+  #endif
+  void set_name(const char* value);
+  void set_name(const void* value, size_t size);
+  ::std::string* mutable_name();
+  ::std::string* release_name();
+  void set_allocated_name(::std::string* name);
+
+  // bytes pwd = 3;
+  void clear_pwd();
+  static const int kPwdFieldNumber = 3;
+  const ::std::string& pwd() const;
+  void set_pwd(const ::std::string& value);
+  #if LANG_CXX11
+  void set_pwd(::std::string&& value);
+  #endif
+  void set_pwd(const char* value);
+  void set_pwd(const void* value, size_t size);
+  ::std::string* mutable_pwd();
+  ::std::string* release_pwd();
+  void set_allocated_pwd(::std::string* pwd);
+
+  // uint32 id = 1;
+  void clear_id();
+  static const int kIdFieldNumber = 1;
+  ::google::protobuf::uint32 id() const;
+  void set_id(::google::protobuf::uint32 value);
+
+  // @@protoc_insertion_point(class_scope:fixbug.RegisterRequest)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::ArenaStringPtr name_;
+  ::google::protobuf::internal::ArenaStringPtr pwd_;
+  ::google::protobuf::uint32 id_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::protobuf_user_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class RrgisterResponse : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:fixbug.RrgisterResponse) */ {
+ public:
+  RrgisterResponse();
+  virtual ~RrgisterResponse();
+
+  RrgisterResponse(const RrgisterResponse& from);
+
+  inline RrgisterResponse& operator=(const RrgisterResponse& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  RrgisterResponse(RrgisterResponse&& from) noexcept
+    : RrgisterResponse() {
+    *this = ::std::move(from);
+  }
+
+  inline RrgisterResponse& operator=(RrgisterResponse&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const RrgisterResponse& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const RrgisterResponse* internal_default_instance() {
+    return reinterpret_cast<const RrgisterResponse*>(
+               &_RrgisterResponse_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    4;
+
+  void Swap(RrgisterResponse* other);
+  friend void swap(RrgisterResponse& a, RrgisterResponse& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline RrgisterResponse* New() const final {
+    return CreateMaybeMessage<RrgisterResponse>(NULL);
+  }
+
+  RrgisterResponse* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<RrgisterResponse>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const RrgisterResponse& from);
+  void MergeFrom(const RrgisterResponse& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(RrgisterResponse* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // .fixbug.ResultCode result = 1;
+  bool has_result() const;
+  void clear_result();
+  static const int kResultFieldNumber = 1;
+  private:
+  const ::fixbug::ResultCode& _internal_result() const;
+  public:
+  const ::fixbug::ResultCode& result() const;
+  ::fixbug::ResultCode* release_result();
+  ::fixbug::ResultCode* mutable_result();
+  void set_allocated_result(::fixbug::ResultCode* result);
+
+  // bool succuss = 2;
+  void clear_succuss();
+  static const int kSuccussFieldNumber = 2;
+  bool succuss() const;
+  void set_succuss(bool value);
+
+  // @@protoc_insertion_point(class_scope:fixbug.RrgisterResponse)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::fixbug::ResultCode* result_;
+  bool succuss_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::protobuf_user_2eproto::TableStruct;
+};
 // ===================================================================
 
 class UserServiceRpc_Stub;
@@ -444,6 +701,10 @@ class UserServiceRpc : public ::google::protobuf::Service {
   virtual void Login(::google::protobuf::RpcController* controller,
                        const ::fixbug::LoginRequest* request,
                        ::fixbug::LoginResponse* response,
+                       ::google::protobuf::Closure* done);
+  virtual void Register(::google::protobuf::RpcController* controller,
+                       const ::fixbug::RegisterRequest* request,
+                       ::fixbug::RrgisterResponse* response,
                        ::google::protobuf::Closure* done);
 
   // implements Service ----------------------------------------------
@@ -477,6 +738,10 @@ class UserServiceRpc_Stub : public UserServiceRpc {
   void Login(::google::protobuf::RpcController* controller,
                        const ::fixbug::LoginRequest* request,
                        ::fixbug::LoginResponse* response,
+                       ::google::protobuf::Closure* done);
+  void Register(::google::protobuf::RpcController* controller,
+                       const ::fixbug::RegisterRequest* request,
+                       ::fixbug::RrgisterResponse* response,
                        ::google::protobuf::Closure* done);
  private:
   ::google::protobuf::RpcChannel* channel_;
@@ -745,9 +1010,209 @@ inline void LoginResponse::set_succuss(bool value) {
   // @@protoc_insertion_point(field_set:fixbug.LoginResponse.succuss)
 }
 
+// -------------------------------------------------------------------
+
+// RegisterRequest
+
+// uint32 id = 1;
+inline void RegisterRequest::clear_id() {
+  id_ = 0u;
+}
+inline ::google::protobuf::uint32 RegisterRequest::id() const {
+  // @@protoc_insertion_point(field_get:fixbug.RegisterRequest.id)
+  return id_;
+}
+inline void RegisterRequest::set_id(::google::protobuf::uint32 value) {
+  
+  id_ = value;
+  // @@protoc_insertion_point(field_set:fixbug.RegisterRequest.id)
+}
+
+// bytes name = 2;
+inline void RegisterRequest::clear_name() {
+  name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& RegisterRequest::name() const {
+  // @@protoc_insertion_point(field_get:fixbug.RegisterRequest.name)
+  return name_.GetNoArena();
+}
+inline void RegisterRequest::set_name(const ::std::string& value) {
+  
+  name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:fixbug.RegisterRequest.name)
+}
+#if LANG_CXX11
+inline void RegisterRequest::set_name(::std::string&& value) {
+  
+  name_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:fixbug.RegisterRequest.name)
+}
+#endif
+inline void RegisterRequest::set_name(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:fixbug.RegisterRequest.name)
+}
+inline void RegisterRequest::set_name(const void* value, size_t size) {
+  
+  name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:fixbug.RegisterRequest.name)
+}
+inline ::std::string* RegisterRequest::mutable_name() {
+  
+  // @@protoc_insertion_point(field_mutable:fixbug.RegisterRequest.name)
+  return name_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* RegisterRequest::release_name() {
+  // @@protoc_insertion_point(field_release:fixbug.RegisterRequest.name)
+  
+  return name_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void RegisterRequest::set_allocated_name(::std::string* name) {
+  if (name != NULL) {
+    
+  } else {
+    
+  }
+  name_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), name);
+  // @@protoc_insertion_point(field_set_allocated:fixbug.RegisterRequest.name)
+}
+
+// bytes pwd = 3;
+inline void RegisterRequest::clear_pwd() {
+  pwd_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& RegisterRequest::pwd() const {
+  // @@protoc_insertion_point(field_get:fixbug.RegisterRequest.pwd)
+  return pwd_.GetNoArena();
+}
+inline void RegisterRequest::set_pwd(const ::std::string& value) {
+  
+  pwd_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:fixbug.RegisterRequest.pwd)
+}
+#if LANG_CXX11
+inline void RegisterRequest::set_pwd(::std::string&& value) {
+  
+  pwd_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:fixbug.RegisterRequest.pwd)
+}
+#endif
+inline void RegisterRequest::set_pwd(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  pwd_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:fixbug.RegisterRequest.pwd)
+}
+inline void RegisterRequest::set_pwd(const void* value, size_t size) {
+  
+  pwd_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:fixbug.RegisterRequest.pwd)
+}
+inline ::std::string* RegisterRequest::mutable_pwd() {
+  
+  // @@protoc_insertion_point(field_mutable:fixbug.RegisterRequest.pwd)
+  return pwd_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* RegisterRequest::release_pwd() {
+  // @@protoc_insertion_point(field_release:fixbug.RegisterRequest.pwd)
+  
+  return pwd_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void RegisterRequest::set_allocated_pwd(::std::string* pwd) {
+  if (pwd != NULL) {
+    
+  } else {
+    
+  }
+  pwd_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), pwd);
+  // @@protoc_insertion_point(field_set_allocated:fixbug.RegisterRequest.pwd)
+}
+
+// -------------------------------------------------------------------
+
+// RrgisterResponse
+
+// .fixbug.ResultCode result = 1;
+inline bool RrgisterResponse::has_result() const {
+  return this != internal_default_instance() && result_ != NULL;
+}
+inline void RrgisterResponse::clear_result() {
+  if (GetArenaNoVirtual() == NULL && result_ != NULL) {
+    delete result_;
+  }
+  result_ = NULL;
+}
+inline const ::fixbug::ResultCode& RrgisterResponse::_internal_result() const {
+  return *result_;
+}
+inline const ::fixbug::ResultCode& RrgisterResponse::result() const {
+  const ::fixbug::ResultCode* p = result_;
+  // @@protoc_insertion_point(field_get:fixbug.RrgisterResponse.result)
+  return p != NULL ? *p : *reinterpret_cast<const ::fixbug::ResultCode*>(
+      &::fixbug::_ResultCode_default_instance_);
+}
+inline ::fixbug::ResultCode* RrgisterResponse::release_result() {
+  // @@protoc_insertion_point(field_release:fixbug.RrgisterResponse.result)
+  
+  ::fixbug::ResultCode* temp = result_;
+  result_ = NULL;
+  return temp;
+}
+inline ::fixbug::ResultCode* RrgisterResponse::mutable_result() {
+  
+  if (result_ == NULL) {
+    auto* p = CreateMaybeMessage<::fixbug::ResultCode>(GetArenaNoVirtual());
+    result_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:fixbug.RrgisterResponse.result)
+  return result_;
+}
+inline void RrgisterResponse::set_allocated_result(::fixbug::ResultCode* result) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete result_;
+  }
+  if (result) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      result = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, result, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  result_ = result;
+  // @@protoc_insertion_point(field_set_allocated:fixbug.RrgisterResponse.result)
+}
+
+// bool succuss = 2;
+inline void RrgisterResponse::clear_succuss() {
+  succuss_ = false;
+}
+inline bool RrgisterResponse::succuss() const {
+  // @@protoc_insertion_point(field_get:fixbug.RrgisterResponse.succuss)
+  return succuss_;
+}
+inline void RrgisterResponse::set_succuss(bool value) {
+  
+  succuss_ = value;
+  // @@protoc_insertion_point(field_set:fixbug.RrgisterResponse.succuss)
+}
+
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------

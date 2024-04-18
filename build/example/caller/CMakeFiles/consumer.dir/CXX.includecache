@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-../example/user.pb.h
+../example/friend.pb.h
 string
 -
 google/protobuf/stubs/common.h
@@ -39,6 +39,10 @@ google/protobuf/unknown_field_set.h
 ../src/include/mprpcapplication.h
 mprpcconfig.h
 ../src/include/mprpcconfig.h
+mprpcchannel.h
+../src/include/mprpcchannel.h
+mprpccontroller.h
+../src/include/mprpccontroller.h
 
 ../src/include/mprpcchannel.h
 google/protobuf/service.h
@@ -54,13 +58,17 @@ unordered_map
 string
 -
 
-/home/yanglanqi/Working/RPC/RPC/example/caller/calluserservice.cc
+../src/include/mprpccontroller.h
+google/protobuf/service.h
+-
+string
+-
+
+/home/yanglanqi/Working/RPC/RPC/example/caller/callfriendservice.cc
 iostream
 -
-mprpcchannel.h
-/home/yanglanqi/Working/RPC/RPC/example/caller/mprpcchannel.h
-user.pb.h
-/home/yanglanqi/Working/RPC/RPC/example/caller/user.pb.h
+friend.pb.h
+/home/yanglanqi/Working/RPC/RPC/example/caller/friend.pb.h
 mprpcapplication.h
 /home/yanglanqi/Working/RPC/RPC/example/caller/mprpcapplication.h
 

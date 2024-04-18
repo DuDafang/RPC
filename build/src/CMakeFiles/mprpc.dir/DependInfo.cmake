@@ -7,6 +7,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/yanglanqi/Working/RPC/RPC/src/mprpcapplication.cc" "/home/yanglanqi/Working/RPC/RPC/build/src/CMakeFiles/mprpc.dir/mprpcapplication.cc.o"
   "/home/yanglanqi/Working/RPC/RPC/src/mprpcchannel.cc" "/home/yanglanqi/Working/RPC/RPC/build/src/CMakeFiles/mprpc.dir/mprpcchannel.cc.o"
   "/home/yanglanqi/Working/RPC/RPC/src/mprpcconfig.cc" "/home/yanglanqi/Working/RPC/RPC/build/src/CMakeFiles/mprpc.dir/mprpcconfig.cc.o"
+  "/home/yanglanqi/Working/RPC/RPC/src/mprpccontroller.cc" "/home/yanglanqi/Working/RPC/RPC/build/src/CMakeFiles/mprpc.dir/mprpccontroller.cc.o"
   "/home/yanglanqi/Working/RPC/RPC/src/rpcheader.pb.cc" "/home/yanglanqi/Working/RPC/RPC/build/src/CMakeFiles/mprpc.dir/rpcheader.pb.cc.o"
   "/home/yanglanqi/Working/RPC/RPC/src/rpcprovider.cc" "/home/yanglanqi/Working/RPC/RPC/build/src/CMakeFiles/mprpc.dir/rpcprovider.cc.o"
   )

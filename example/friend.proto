@@ -1,0 +1,30 @@
+//每次修改了.proto文件，需要用protoc命令重新生成.pb.h和.pb.cc文件
+//protoc xxx.proto --cpp_out=./
+syntax = "proto3";
+
+package fixbug;
+
+option cc_generic_services = true;
+
+message ResultCode
+{
+    int32 errcode = 1;
+    bytes errmsg = 2;
+}
+
+message GetFriendsListRequest
+{
+    uint32 userid = 1;
+}
+
+message GetFriendsListResponse
+{
+    ResultCode result = 1;
+    repeated bytes friends = 2;//因为用户的好友是列表，repeated代表是列表
+}
+//好友模块
+service FriendServiceRpc
+{
+    rpc GetFriendsList(GetFriendsListRequest) returns(GetFriendsListResponse);
+}
+//protoc user.proto --cpp_out=./

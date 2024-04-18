@@ -24,7 +24,22 @@ message LoginResponse
     bool succuss = 2;
 }
 
+message RegisterRequest//增加一个rpc方法
+{
+    uint32 id = 1;
+    bytes name = 2;
+    bytes pwd = 3;
+}
+
+message RrgisterResponse
+{
+    ResultCode result = 1;
+    bool succuss = 2;
+}
+
 service UserServiceRpc
 {
     rpc Login(LoginRequest) returns(LoginResponse);
+    rpc Register(RegisterRequest) returns(RrgisterResponse);
 }
+//protoc user.proto --cpp_out=./

@@ -33,6 +33,29 @@ int main(int argc, char **argv) {
     } else {
         std::cout << "rpc login response erroe: " << responese.result().errmsg() << std::endl;
     } 
+
+
+
+
+    //演示调用远程发布的rpc方法register
+    fixbug::RegisterRequest req;
+    req.set_id(2000);
+    req.set_name("mprpc");
+    req.set_pwd("666");
+    fixbug::RrgisterResponse rsp;
+    //以同步的方式，发起rpc调用请求，等待返回结果
+    stub.Register(nullptr, &req, &rsp, nullptr);
+
+    //一次rpc调用完成，读调用的结果
+    if (rsp.result().errcode() == 0) {
+        //值=0表示没错误
+        std::cout << "rpc register response: " << rsp.succuss() << std::endl;
+    } else {
+        std::cout << "rpc register response erroe: " << rsp.result().errmsg() << std::endl;
+    } 
+
+
+
     return 0;
 }
 //rpc调用方对于rpc方法的请求进行序列化和网络发送，以（阻塞？）同步的方式等待rpc返回的结果，然后再进行数据的反序列化，把响应结果上报给应用

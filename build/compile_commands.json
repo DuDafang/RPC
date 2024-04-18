@@ -6,11 +6,6 @@
 },
 {
   "directory": "/home/yanglanqi/Working/RPC/RPC/build/src",
-  "command": "/usr/bin/g++   -I/home/yanglanqi/Working/RPC/RPC/src/include -I/home/yanglanqi/Working/RPC/RPC/example  -g   -o CMakeFiles/mprpc.dir/mprpcchannel.cc.o -c /home/yanglanqi/Working/RPC/RPC/src/mprpcchannel.cc",
-  "file": "/home/yanglanqi/Working/RPC/RPC/src/mprpcchannel.cc"
-},
-{
-  "directory": "/home/yanglanqi/Working/RPC/RPC/build/src",
   "command": "/usr/bin/g++   -I/home/yanglanqi/Working/RPC/RPC/src/include -I/home/yanglanqi/Working/RPC/RPC/example  -g   -o CMakeFiles/mprpc.dir/mprpcconfig.cc.o -c /home/yanglanqi/Working/RPC/RPC/src/mprpcconfig.cc",
   "file": "/home/yanglanqi/Working/RPC/RPC/src/mprpcconfig.cc"
 },
@@ -25,23 +20,33 @@
   "file": "/home/yanglanqi/Working/RPC/RPC/src/rpcprovider.cc"
 },
 {
-  "directory": "/home/yanglanqi/Working/RPC/RPC/build/example/callee",
-  "command": "/usr/bin/g++   -I/home/yanglanqi/Working/RPC/RPC/src/include -I/home/yanglanqi/Working/RPC/RPC/example  -g   -o CMakeFiles/provider.dir/userservice.cc.o -c /home/yanglanqi/Working/RPC/RPC/example/callee/userservice.cc",
-  "file": "/home/yanglanqi/Working/RPC/RPC/example/callee/userservice.cc"
+  "directory": "/home/yanglanqi/Working/RPC/RPC/build/src",
+  "command": "/usr/bin/g++   -I/home/yanglanqi/Working/RPC/RPC/src/include -I/home/yanglanqi/Working/RPC/RPC/example  -g   -o CMakeFiles/mprpc.dir/mprpcchannel.cc.o -c /home/yanglanqi/Working/RPC/RPC/src/mprpcchannel.cc",
+  "file": "/home/yanglanqi/Working/RPC/RPC/src/mprpcchannel.cc"
+},
+{
+  "directory": "/home/yanglanqi/Working/RPC/RPC/build/src",
+  "command": "/usr/bin/g++   -I/home/yanglanqi/Working/RPC/RPC/src/include -I/home/yanglanqi/Working/RPC/RPC/example  -g   -o CMakeFiles/mprpc.dir/mprpccontroller.cc.o -c /home/yanglanqi/Working/RPC/RPC/src/mprpccontroller.cc",
+  "file": "/home/yanglanqi/Working/RPC/RPC/src/mprpccontroller.cc"
 },
 {
   "directory": "/home/yanglanqi/Working/RPC/RPC/build/example/callee",
-  "command": "/usr/bin/g++   -I/home/yanglanqi/Working/RPC/RPC/src/include -I/home/yanglanqi/Working/RPC/RPC/example  -g   -o CMakeFiles/provider.dir/__/user.pb.cc.o -c /home/yanglanqi/Working/RPC/RPC/example/user.pb.cc",
-  "file": "/home/yanglanqi/Working/RPC/RPC/example/user.pb.cc"
+  "command": "/usr/bin/g++   -I/home/yanglanqi/Working/RPC/RPC/src/include -I/home/yanglanqi/Working/RPC/RPC/example  -g   -o CMakeFiles/provider.dir/friendservice.cc.o -c /home/yanglanqi/Working/RPC/RPC/example/callee/friendservice.cc",
+  "file": "/home/yanglanqi/Working/RPC/RPC/example/callee/friendservice.cc"
+},
+{
+  "directory": "/home/yanglanqi/Working/RPC/RPC/build/example/callee",
+  "command": "/usr/bin/g++   -I/home/yanglanqi/Working/RPC/RPC/src/include -I/home/yanglanqi/Working/RPC/RPC/example  -g   -o CMakeFiles/provider.dir/__/friend.pb.cc.o -c /home/yanglanqi/Working/RPC/RPC/example/friend.pb.cc",
+  "file": "/home/yanglanqi/Working/RPC/RPC/example/friend.pb.cc"
 },
 {
   "directory": "/home/yanglanqi/Working/RPC/RPC/build/example/caller",
-  "command": "/usr/bin/g++   -I/home/yanglanqi/Working/RPC/RPC/src/include -I/home/yanglanqi/Working/RPC/RPC/example  -g   -o CMakeFiles/consumer.dir/calluserservice.cc.o -c /home/yanglanqi/Working/RPC/RPC/example/caller/calluserservice.cc",
-  "file": "/home/yanglanqi/Working/RPC/RPC/example/caller/calluserservice.cc"
+  "command": "/usr/bin/g++   -I/home/yanglanqi/Working/RPC/RPC/src/include -I/home/yanglanqi/Working/RPC/RPC/example  -g   -o CMakeFiles/consumer.dir/callfriendservice.cc.o -c /home/yanglanqi/Working/RPC/RPC/example/caller/callfriendservice.cc",
+  "file": "/home/yanglanqi/Working/RPC/RPC/example/caller/callfriendservice.cc"
 },
 {
   "directory": "/home/yanglanqi/Working/RPC/RPC/build/example/caller",
-  "command": "/usr/bin/g++   -I/home/yanglanqi/Working/RPC/RPC/src/include -I/home/yanglanqi/Working/RPC/RPC/example  -g   -o CMakeFiles/consumer.dir/__/user.pb.cc.o -c /home/yanglanqi/Working/RPC/RPC/example/user.pb.cc",
-  "file": "/home/yanglanqi/Working/RPC/RPC/example/user.pb.cc"
+  "command": "/usr/bin/g++   -I/home/yanglanqi/Working/RPC/RPC/src/include -I/home/yanglanqi/Working/RPC/RPC/example  -g   -o CMakeFiles/consumer.dir/__/friend.pb.cc.o -c /home/yanglanqi/Working/RPC/RPC/example/friend.pb.cc",
+  "file": "/home/yanglanqi/Working/RPC/RPC/example/friend.pb.cc"
 }
 ]
