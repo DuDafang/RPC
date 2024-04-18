@@ -1,0 +1,2 @@
+18:39:43 => first log msg! 18:39:43 => /home/yanglanqi/Working/RPC/RPC/example/callee/friendservice.cc:main:4118:42:2 => first log msg! 
+18:42:2 => /home/yanglanqi/Working/RPC/RPC/example/callee/friendservice.cc:main:41

@@ -3,7 +3,7 @@
 #include "friend.pb.h"
 #include "mprpcapplication.h"
 #include "rpcprovider.h"
-
+#include "logger.h"
 class FriendService : public fixbug::FriendServiceRpc
 {
 public:
@@ -37,6 +37,9 @@ public:
 
 int main(int argc, char **argv)//框架使用
 {   
+    LOG_INFO("first log msg! ");
+    LOG_ERR("%s:%s:%d", __FILE__, __FUNCTION__, __LINE__);
+
     //调用框架的初始化操作
     MprpcApplication::Init(argc, argv);//初始化时，传入这两个参数是因为启动的时候要读配置文件
 

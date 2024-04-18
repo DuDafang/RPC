@@ -6,6 +6,7 @@ set(SRC_LIST
     rpcprovider.cc 
     mprpcchannel.cc
     mprpccontroller.cc
+    logger.cc
 )#把所有的源文件都放进来，可以防止上一行代码出问题
 add_library(mprpc ${SRC_LIST})#编译成library，由SRC_LIST这些源文件生成一个shared动态库
 target_link_libraries(mprpc muduo_net muduo_base pthread)#sudo find /usr -name "libmuduo*"

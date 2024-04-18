@@ -30,6 +30,11 @@
   "file": "/home/yanglanqi/Working/RPC/RPC/src/mprpccontroller.cc"
 },
 {
+  "directory": "/home/yanglanqi/Working/RPC/RPC/build/src",
+  "command": "/usr/bin/g++   -I/home/yanglanqi/Working/RPC/RPC/src/include -I/home/yanglanqi/Working/RPC/RPC/example  -g   -o CMakeFiles/mprpc.dir/logger.cc.o -c /home/yanglanqi/Working/RPC/RPC/src/logger.cc",
+  "file": "/home/yanglanqi/Working/RPC/RPC/src/logger.cc"
+},
+{
   "directory": "/home/yanglanqi/Working/RPC/RPC/build/example/callee",
   "command": "/usr/bin/g++   -I/home/yanglanqi/Working/RPC/RPC/src/include -I/home/yanglanqi/Working/RPC/RPC/example  -g   -o CMakeFiles/provider.dir/friendservice.cc.o -c /home/yanglanqi/Working/RPC/RPC/example/callee/friendservice.cc",
   "file": "/home/yanglanqi/Working/RPC/RPC/example/callee/friendservice.cc"
